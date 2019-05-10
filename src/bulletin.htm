@@ -1,0 +1,48 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Nouvelle page 1</title>
+<script language="javascript">
+function verif(){
+ch= f1.T1.value;
+ch1= ch.charAt(0)+ch.charAt(1)+ch.charAt(2);
+ch2=ch.charAt(3)+ch.charAt(4);
+
+
+if((ch.length!=5))
+{alert ('chaine de longueur 5');
+   return false;
+   }
+
+if((ch1!='4si'))
+{
+   alert ('chaine doit commencer par 4si et suivi par deux chiffres');
+   return false;
+   }
+ if((ch2=='00'))
+{
+   alert ('chaine doit commencer par 4si et suivi par deux chiffres');
+   return false;
+   }
+   }
+
+</script>
+</head>
+
+<body>
+
+<p align="center"><b><font size="6">Bulletin des notes</font></b></p>
+<form method="POST" action="bullettin.php" name="f1">
+
+	<p><b>Numéro de l'élève</b> : <input type="text" name="T1" size="20"></p>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="reset" value="Annuler" name="B1">&nbsp;&nbsp;
+	<input type="submit" value="Afficher" name="B2" onclick="verif()"></p>
+</form>
+<p>&nbsp;</p>
+
+</body>
+
+</html>
